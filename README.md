@@ -52,8 +52,8 @@
 ### 运行解决方案
 1. 必须先运行Consul，cmd命令：consul.exe agent --dev
 2. 启动项目ApiOne和ApiTwo，你可以打开项目所在目录通过命令行命令，每个项目都可以运行多个实例，如：打开ApiOne项目根目录，直接运行如下命令	
-	> dotnet run --ip 127.0.0.1 --port 8000
-	> dotnet run --ip 127.0.0.1 --port 8001
+	> dotnet run --ip 127.0.0.1 --port 8000  
+	> dotnet run --ip 127.0.0.1 --port 8001  
 	这样就启动了ApiOne项目的两个实例，能接受ip和port参数是因为自己写的代码才支持这样运行，同理可以允许多个ApiTwo项目的实例
 3. 启动Ids4Center.Mvc项目，该项目的端口写死了12345，不需要改动，因为客户端项目AccessApiOne也是写死了这个端口
 4. 启动APIGatewayByOcelot网关项目，端口默认5000，SSL端口是5001。此时可以通过浏览器访问:https://localhost:5001/two/values 可以看到返回结果，
