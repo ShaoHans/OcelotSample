@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27705.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGatewayByOcelot", "APIGatewayByOcelot\APIGatewayByOcelot.csproj", "{30A700DE-834D-43C8-8851-1323F20BBF29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiOne", "ApiOne\ApiOne.csproj", "{162755DD-8172-4A3A-8084-2B6BDE6EBD98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "使用Ocelot当做API网关", "使用Ocelot当做API网关", "{7E3803E4-5817-44F4-9DB2-E16FFAB0D4BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "下游API服务", "下游API服务", "{88C8D1A9-21AF-4BFA-8BA3-3CEA410AC539}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30A700DE-834D-43C8-8851-1323F20BBF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A700DE-834D-43C8-8851-1323F20BBF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A700DE-834D-43C8-8851-1323F20BBF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A700DE-834D-43C8-8851-1323F20BBF29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162755DD-8172-4A3A-8084-2B6BDE6EBD98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162755DD-8172-4A3A-8084-2B6BDE6EBD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162755DD-8172-4A3A-8084-2B6BDE6EBD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162755DD-8172-4A3A-8084-2B6BDE6EBD98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30A700DE-834D-43C8-8851-1323F20BBF29} = {7E3803E4-5817-44F4-9DB2-E16FFAB0D4BB}
+		{162755DD-8172-4A3A-8084-2B6BDE6EBD98} = {88C8D1A9-21AF-4BFA-8BA3-3CEA410AC539}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9091581C-9BB0-453A-8A2D-E14A063C8D42}
+	EndGlobalSection
+EndGlobal
