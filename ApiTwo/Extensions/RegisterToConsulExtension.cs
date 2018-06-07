@@ -12,7 +12,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace ApiOne.Extensions
+namespace ApiTwo.Extensions
 {
     public static class RegisterToConsulExtension
     {
@@ -75,7 +75,7 @@ namespace ApiOne.Extensions
                     Port = address.Port
                 };
 
-                var result = consul.Agent.ServiceRegister(registration).GetAwaiter().GetResult();
+                consul.Agent.ServiceRegister(registration).GetAwaiter().GetResult();
 
                 // 服务应用停止后发注册RestApi服务
                 appLife.ApplicationStopping.Register(() =>

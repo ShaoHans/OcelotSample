@@ -3,12 +3,47 @@
     {
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
-      "UpstreamPathTemplate": "/{url}",
+      "UpstreamPathTemplate": "/one/{url}",
       "UpstreamHttpMethod": [
         "Get",
         "Post"
       ],
       "ServiceName": "ApiOne",
+
+      // LoadBalancer将决定负载均衡的算法，三种取值
+      // RoundRobin：轮流发送
+      // LeastConnection：将请求发往最空闲的那个服务器
+      // NoLoadBalance：总是发往第一个请求或者是服务发现
+      "LoadBalancer": "RoundRobin",
+
+      //限流
+      "RateLimitOptions": {
+        "ClientWhitelist": [], //白名单
+        "EnableRateLimiting": true, //是否启用限流
+        "Period": "2s", //统计时间段
+        "Limit": 3, //在统计时间段内允许的最大请求数量。即：2秒内只允许3次请求
+        "PeriodTimespan": 5 //多少秒之后客户端可以重试
+      },
+
+      //服务质量与熔断
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3, //允许多少个异常请求
+        "DurationOfBreak": 5, //熔断的时间，单位为秒
+        "TimeoutValue": 5000 //如果下游请求的处理时间超过多少则自动将请求设置为超时
+      },
+
+      // 启用服务发现
+      "UseServiceDiscovery": true
+    },
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/two/{url}",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ],
+      "ServiceName": "ApiTwo",
 
       // LoadBalancer将决定负载均衡的算法，三种取值
       // RoundRobin：轮流发送

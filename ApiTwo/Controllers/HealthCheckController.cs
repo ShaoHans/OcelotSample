@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiOne.Controllers
+namespace ApiTwo.Controllers
 {
     [Route("[controller]")]
-    [ApiController]
-    public class HealthCheckController : ControllerBase
+    public class HealthCheckController : Controller
     {
         [HttpGet("")]
         [HttpHead("")]
