@@ -8,6 +8,11 @@
         "Get",
         "Post"
       ],
+      // 下游API服务需要授权后才能访问
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      },
       "ServiceName": "ApiOne",
 
       // LoadBalancer将决定负载均衡的算法，三种取值

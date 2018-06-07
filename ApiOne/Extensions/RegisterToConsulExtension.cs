@@ -59,6 +59,7 @@ namespace ApiOne.Extensions
             {
                 var serviceId = $"{serviceOptions.Value.ServiceName}_{address.Host}:{address.Port}";
 
+                // 提供健康检查的HTTP接口
                 var httpCheck = new AgentServiceCheck()
                 {
                     DeregisterCriticalServiceAfter = TimeSpan.FromMinutes(1),
