@@ -1,5 +1,4 @@
 # Ocelot使用案例
-[![Build status](https://dev.azure.com/shaomenghao/test/_apis/build/status/test-OcelotSample-CI)](https://dev.azure.com/shaomenghao/test/_build/latest?definitionId=2)
 ### 解决方案中各项目介绍
 * APIGatewayByOcelot：该项目的作用是API网关，采用 [Ocelot](https://github.com/ThreeMammals/Ocelot) 组件
 * ApiOne：该项目为下游API服务测试项目，需使用 [Consul](https://github.com/hashicorp/consul) 组件注册自己
