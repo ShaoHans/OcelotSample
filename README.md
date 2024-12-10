@@ -32,14 +32,13 @@
 
 ### APIGatewayByOcelot网关项目
 1. 下载 Ocelot nuget包，已经包含Consul的服务发现功能
-2. 添加Ocelot.json配置文件，配置参数详见文件
-	> 需要注意的是，如果下游API服务需要授权才能访问，只要添加如下配置参数，并在StartUp类中编写相关代码
-		```
-			"AuthenticationOptions": {
-			"AuthenticationProviderKey": "TestKey",
-			"AllowedScopes": []
-		  }
-		```
+2. 添加Ocelot.json配置文件，配置参数详见文件。需要注意的是，如果下游API服务需要授权才能访问，只要添加如下配置参数，并在StartUp类中编写相关代码
+```
+"AuthenticationOptions": {
+	"AuthenticationProviderKey": "TestKey",
+	"AllowedScopes": []
+  }
+```
 
 ### Ids4Center.Mvc认证授权中心
 1. 下载 IdentityServer4 nuget包
