@@ -6,7 +6,6 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
-    <PackageReference Include="Ocelot" Version="7.0.4" />
+    <PackageReference Include="Ocelot" Version="23.4.3" />
   </ItemGroup>
 </Project>

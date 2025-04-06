@@ -1,8 +1,7 @@
-﻿using IdentityModel.Client;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Duende.IdentityModel.Client;
 
 namespace AccessApiOne
 {
@@ -10,7 +9,7 @@ namespace AccessApiOne
     {
         static void Main(string[] args)
         {
-            Test().Wait(); 
+            Test().Wait();
             Console.ReadKey();
         }
 
@@ -26,8 +25,14 @@ namespace AccessApiOne
 
             // 客户端模式
             // 使用IdentityServer服务端配置的客户端Id和Secret，通过TokenEndpoint地址向IdentityServer服务端获取访问one-api资源需要的AccessToken
-            TokenClient tokenClient = new TokenClient(discoveryResponse.TokenEndpoint, "client1", "secret1");
-            TokenResponse tokenResponse = await tokenClient.RequestClientCredentialsAsync("one-api");
+            TokenClient tokenClient = new TokenClient(
+                discoveryResponse.TokenEndpoint,
+                "client1",
+                "secret1"
+            );
+            TokenResponse tokenResponse = await tokenClient.RequestClientCredentialsAsync(
+                "one-api"
+            );
             if (tokenResponse.IsError)
             {
                 Console.WriteLine($"获取AccessToken出错：{tokenResponse.Error}");
